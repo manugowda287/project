@@ -13988,17 +13988,9 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">binom_pmf</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">stats</span><span class="o">.</span><span class="n">binom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-
-<span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;xlabel&#39;</span><span class="p">:</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;ylabel&#39;</span><span class="p">:</span> <span class="s1">&#39;probability&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;ylim&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-<span class="p">}</span>
-
-<span class="n">nbinteract</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">),</span> <span class="n">binom_pmf</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
-               <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>nbinteract tutorial.ipynb
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;/files/tutorial.html?download=1&quot; target=&quot;_blank&quot;&gt;Done! Click here to download the HTML file.&lt;/a&gt;&#39;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14013,17 +14005,157 @@ div#notebook {
 
     
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-61-853579b92883&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      8</span> }
-<span class="ansi-green-fg">      9</span> 
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 10</span><span class="ansi-yellow-intense-fg ansi-bold"> nbinteract.bar(np.arange(21), binom_pmf, options=options,
-</span><span class="ansi-green-fg">     11</span>                n=(0, 20), p=(0.0, 1.0))
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-blue-fg">[nbinteract] </span>Converting notebooks to HTML...
+<span class="ansi-blue-fg">[nbinteract] </span>Converted tutorial.ipynb to tutorial.html
+<span class="ansi-blue-fg">[nbinteract] </span>Done!
+</pre>
+</div>
+</div>
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;nbinteract&#39; is not defined</pre>
+<div class="output_area">
+
+    
+
+
+<div class="output_html rendered_html output_subarea ">
+<a href="/files/tutorial.html?download=1" target="_blank">Done! Click here to download the HTML file.</a>
+</div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install jovian --upgrade -q
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">jovian</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+
+<div id="2663d4c5-7074-4e30-bbcd-9b86d8814d3a"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#2663d4c5-7074-4e30-bbcd-9b86d8814d3a');
+if (window.IPython && IPython.notebook.kernel) IPython.notebook.kernel.execute('jovian.utils.jupyter.get_notebook_name_saved = lambda: "' + IPython.notebook.notebook_name + '"')
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">jovian</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+
+<div id="0e0d3e4a-894e-4ecc-b2bc-d4ca94ff8eff"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#0e0d3e4a-894e-4ecc-b2bc-d4ca94ff8eff');
+window.require && require(["base/js/namespace"],function(Jupyter){Jupyter.notebook.save_checkpoint()})
+</script>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[jovian] Attempting to save notebook..
+[jovian] Please enter your API key ( from https://jovian.ml/ ):
+API KEY: ········
+[jovian] Uploading notebook..
+[jovian] Capturing environment..
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[jovian] Error: Failed to read Anaconda environment using command: &#34;conda env export -n base --no-builds&#34;
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[jovian] Committed successfully! https://jovian.ml/manugowda287/tutorial-46d2c
+
+</pre>
 </div>
 </div>
 
@@ -14073,4 +14205,22 @@ div#notebook {
 </script>
     </div>
   </div>
+  <script>
+  function code_toggle() {
+    if (code_shown){
+      $('div.input').hide('500');
+      $('#toggleButton').val('Show Code')
+    } else {
+      $('div.input').show('500');
+      $('#toggleButton').val('Hide Code')
+    }
+    code_shown = !code_shown
+  }
+ 
+  $( document ).ready(function(){
+    code_shown=false;
+    $('div.input').hide()
+  });
+</script>
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
 </body>
