@@ -14178,7 +14178,7 @@ API KEY: ········
     </div>
 </div>
 </div>
-
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
   </div>
 
 
@@ -14202,10 +14202,7 @@ API KEY: ········
 
     window.interact = interact
   })()
-</script>
-    </div>
-  </div>
-  <script>
+
   function code_toggle() {
     if (code_shown){
       $('div.input').hide('500');
@@ -14222,5 +14219,9 @@ API KEY: ········
     $('div.input').hide()
   });
 </script>
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
+
+    </div>
+  </div>
+
+
 </body>
